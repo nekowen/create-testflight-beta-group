@@ -30,11 +30,11 @@ jobs:
         with:
           name: 'HogeApp Beta Test'
           set-internal-group: true # Optional
-          app-id: ${APP_ID}
-          api-issuerid: ${secrets.API_ISSUER_ID}
-          api-keyid: ${secrets.API_KEY_ID}
-          api-privatekey: ${secrets.API_PRIVATE_KEY}
-      - run: echo "Created Beta Group: $CREATED_BETA_GROUP_ID"
+          app-id: ${{ vars.APP_ID }}
+          api-issuerid: ${{ secrets.API_ISSUER_ID }}
+          api-keyid: ${{ secrets.API_KEY_ID }}
+          api-privatekey: ${{ secrets.API_PRIVATE_KEY }}
+      - run: echo "$CREATED_BETA_GROUP_ID"
         env:
           CREATED_BETA_GROUP_ID: ${{ steps.create-testflight-beta-group.outputs.id }}
 ```
@@ -62,11 +62,11 @@ jobs:
           delete-name-regex: 'HogeApp' # Optional
           delete-name-regex-option: 'i' # Optional
           name: 'HogeApp Beta Test v1.0.0'
-          app-id: ${APP_ID}
-          api-issuerid: ${secrets.API_ISSUER_ID}
-          api-keyid: ${secrets.API_KEY_ID}
-          api-privatekey: ${secrets.API_PRIVATE_KEY}
-      - run: echo "Deleted Beta Group Name: $DELETED_BETA_GROUP_NAME"
+          app-id: ${{ vars.APP_ID }}
+          api-issuerid: ${{ secrets.API_ISSUER_ID }}
+          api-keyid: ${{ secrets.API_KEY_ID }}
+          api-privatekey: ${{ secrets.API_PRIVATE_KEY }}
+      - run: echo "$DELETED_BETA_GROUP_NAME"
         env:
           DELETED_BETA_GROUP_NAME: ${{ steps.create-testflight-beta-group.outputs.deleted-beta-group-name }}
 ```
