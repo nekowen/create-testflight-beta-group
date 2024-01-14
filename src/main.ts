@@ -13,7 +13,7 @@ export async function run(): Promise<void> {
     )
     const betaGroupName: string = core.getInput('name', { required: true })
     const setInternalGroup: boolean = core.getBooleanInput('set-internal-group')
-    const betaAppId: string = core.getInput('beta-app-id', { required: true })
+    const betaAppId: string = core.getInput('app-id', { required: true })
     const apiPrivateKey: string = core.getInput('api-privatekey', {
       required: true
     })
