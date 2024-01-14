@@ -30,9 +30,7 @@ export async function run(): Promise<void> {
     }
 
     if (deleteBetaGroupNameRegex) {
-      core.info(
-        `Searching for beta group with name "${deleteBetaGroupNameRegex}"`
-      )
+      core.info(`Searching for beta group...`)
 
       const response = await api.fetchBetaGroups(betaAppId)
       const regex = new RegExp(
