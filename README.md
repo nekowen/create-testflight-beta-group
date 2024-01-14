@@ -105,4 +105,4 @@ The name of the beta group that was deleted
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/nekowen/StructCopyMacro/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/nekowen/create-testflight-beta-group/blob/main/LICENSE) for more information.
