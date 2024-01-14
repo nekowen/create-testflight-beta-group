@@ -1,0 +1,57 @@
+name: 'Create/Recreate TestFlight Beta Group'
+description: 'Create or recreate the TestFlight beta group'
+author: 'nekowen'
+inputs:
+  delete-name-regex:
+    description: >
+      Specify the regular expression for the name of the beta group to be deleted.
+    required: false
+  delete-name-regex-option:
+    description: >
+      Specify the regular expression option for the name of the beta group to be deleted.
+    required: false
+    default: ''
+  name:
+    description: 'Specify the name of the beta group to be created'
+    required: true
+  set-internal-group:
+    description: >
+      Specifies whether to create a beta group as an internal test.
+      If delete-name-regex is specified, this parameter is disabled
+    required: false
+  app-id:
+    description: 'Specify the app ID for which you want to create a beta group'
+    required: true
+  api-issuerid:
+    description: 'Specify the issuer ID listed on the API key page of AppStoreConnect'
+    required: true
+  api-keyid:
+    description: 'Specify AppStoreConnect private key ID'
+    required: true
+  api-privatekey:
+    description: 'Specify a private key for AppStoreConnect. Please handle it with care!'
+    required: true
+  
+outputs:
+  id:
+    description: 'The ID of the created beta group'
+  name:
+    description: 'The name of the created beta group'
+  is-internal-group:
+    description: 'The isInternalGroup of the created beta group'
+  public-link:
+    description: 'The publicLink of the created beta group'
+  public-link-enabled:
+    description: 'The publicLinkEnabled of the created beta group'
+  public-link-limit:
+    description: 'The publicLinkLimit of the created beta group'
+  public-link-limit-enabled:
+    description: 'The publicLinkLimitEnabled of the created beta group'
+  feedback-enabled:
+    description: 'The feedbackEnabled of the created beta group'
+  deleted-beta-group-name:
+    description: 'The name of the beta group that was deleted'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
