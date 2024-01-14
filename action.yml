@@ -1,5 +1,5 @@
-name: 'Create/Recreate TestFlight Beta Group'
-description: 'Create or recreate the TestFlight beta group'
+name: 'Create TestFlight Beta Group'
+description: 'Create or re-create beta groups for TestFlight using AppStoreConnect API'
 author: 'nekowen'
 inputs:
   delete-name-regex:
@@ -55,3 +55,7 @@ outputs:
 runs:
   using: 'node20'
   main: 'dist/index.js'
+
+branding:
+  icon: 'anchor'
+  color: 'blue'

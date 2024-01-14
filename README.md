@@ -100,7 +100,7 @@ The feedbackEnabled of the created beta group
 **`feedback-enabled`**  
 The feedbackEnabled of the created beta group
 
-**`delete-beta-group-name`**  
+**`deleted-beta-group-name`**  
 The name of the beta group that was deleted
 
 ## License
